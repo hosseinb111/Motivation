@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Random Motivational Quotes</title>
+  <title>trying to motivate you</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -57,24 +56,209 @@
   <div id="english" class="quote"></div>
   <div id="persian" class="quote persian"></div>
   <button class="change-button" onclick="changeQuotes()">Change the Text</button>
-
   <script>
-    const englishQuotes = ["Believe in yourself—you're unstoppable.", 'Extra English Quote #2', 'Extra English Quote #3', 'Extra English Quote #4', 'Extra English Quote #5', 'Extra English Quote #6', 'Extra English Quote #7', 'Extra English Quote #8', 'Extra English Quote #9', 'Extra English Quote #10', 'Extra English Quote #11', 'Extra English Quote #12', 'Extra English Quote #13', 'Extra English Quote #14', 'Extra English Quote #15', 'Extra English Quote #16', 'Extra English Quote #17', 'Extra English Quote #18', 'Extra English Quote #19', 'Extra English Quote #20', 'Extra English Quote #21', 'Extra English Quote #22', 'Extra English Quote #23', 'Extra English Quote #24', 'Extra English Quote #25', 'Extra English Quote #26', 'Extra English Quote #27', 'Extra English Quote #28', 'Extra English Quote #29', 'Extra English Quote #30', 'Extra English Quote #31', 'Extra English Quote #32', 'Extra English Quote #33', 'Extra English Quote #34', 'Extra English Quote #35', 'Extra English Quote #36', 'Extra English Quote #37', 'Extra English Quote #38', 'Extra English Quote #39', 'Extra English Quote #40', 'Extra English Quote #41', 'Extra English Quote #42', 'Extra English Quote #43', 'Extra English Quote #44', 'Extra English Quote #45', 'Extra English Quote #46', 'Extra English Quote #47', 'Extra English Quote #48', 'Extra English Quote #49', 'Extra English Quote #50', 'Extra English Quote #51', 'Extra English Quote #52', 'Extra English Quote #53', 'Extra English Quote #54', 'Extra English Quote #55', 'Extra English Quote #56', 'Extra English Quote #57', 'Extra English Quote #58', 'Extra English Quote #59', 'Extra English Quote #60', 'Extra English Quote #61', 'Extra English Quote #62', 'Extra English Quote #63', 'Extra English Quote #64', 'Extra English Quote #65', 'Extra English Quote #66', 'Extra English Quote #67', 'Extra English Quote #68', 'Extra English Quote #69', 'Extra English Quote #70', 'Extra English Quote #71', 'Extra English Quote #72', 'Extra English Quote #73', 'Extra English Quote #74', 'Extra English Quote #75', 'Extra English Quote #76', 'Extra English Quote #77', 'Extra English Quote #78', 'Extra English Quote #79', 'Extra English Quote #80', 'Extra English Quote #81', 'Extra English Quote #82', 'Extra English Quote #83', 'Extra English Quote #84', 'Extra English Quote #85', 'Extra English Quote #86', 'Extra English Quote #87', 'Extra English Quote #88', 'Extra English Quote #89', 'Extra English Quote #90', 'Extra English Quote #91', 'Extra English Quote #92', 'Extra English Quote #93', 'Extra English Quote #94', 'Extra English Quote #95', 'Extra English Quote #96', 'Extra English Quote #97', 'Extra English Quote #98', 'Extra English Quote #99', 'Extra English Quote #100', 'Extra English Quote #101', 'Extra English Quote #102', 'Extra English Quote #103', 'Extra English Quote #104', 'Extra English Quote #105', 'Extra English Quote #106', 'Extra English Quote #107', 'Extra English Quote #108', 'Extra English Quote #109', 'Extra English Quote #110', 'Extra English Quote #111', 'Extra English Quote #112', 'Extra English Quote #113', 'Extra English Quote #114', 'Extra English Quote #115', 'Extra English Quote #116', 'Extra English Quote #117', 'Extra English Quote #118', 'Extra English Quote #119', 'Extra English Quote #120', 'Extra English Quote #121', 'Extra English Quote #122', 'Extra English Quote #123', 'Extra English Quote #124', 'Extra English Quote #125', 'Extra English Quote #126', 'Extra English Quote #127', 'Extra English Quote #128', 'Extra English Quote #129', 'Extra English Quote #130', 'Extra English Quote #131', 'Extra English Quote #132', 'Extra English Quote #133', 'Extra English Quote #134', 'Extra English Quote #135', 'Extra English Quote #136', 'Extra English Quote #137', 'Extra English Quote #138', 'Extra English Quote #139', 'Extra English Quote #140', 'Extra English Quote #141', 'Extra English Quote #142', 'Extra English Quote #143', 'Extra English Quote #144', 'Extra English Quote #145', 'Extra English Quote #146', 'Extra English Quote #147', 'Extra English Quote #148', 'Extra English Quote #149', 'Extra English Quote #150', 'Extra English Quote #151', 'Extra English Quote #152', 'Extra English Quote #153', 'Extra English Quote #154', 'Extra English Quote #155', 'Extra English Quote #156', 'Extra English Quote #157', 'Extra English Quote #158', 'Extra English Quote #159', 'Extra English Quote #160', 'Extra English Quote #161', 'Extra English Quote #162', 'Extra English Quote #163', 'Extra English Quote #164', 'Extra English Quote #165', 'Extra English Quote #166', 'Extra English Quote #167', 'Extra English Quote #168', 'Extra English Quote #169', 'Extra English Quote #170', 'Extra English Quote #171', 'Extra English Quote #172', 'Extra English Quote #173', 'Extra English Quote #174', 'Extra English Quote #175', 'Extra English Quote #176', 'Extra English Quote #177', 'Extra English Quote #178', 'Extra English Quote #179', 'Extra English Quote #180', 'Extra English Quote #181', 'Extra English Quote #182', 'Extra English Quote #183', 'Extra English Quote #184', 'Extra English Quote #185', 'Extra English Quote #186', 'Extra English Quote #187', 'Extra English Quote #188', 'Extra English Quote #189', 'Extra English Quote #190', 'Extra English Quote #191', 'Extra English Quote #192', 'Extra English Quote #193', 'Extra English Quote #194', 'Extra English Quote #195', 'Extra English Quote #196', 'Extra English Quote #197', 'Extra English Quote #198', 'Extra English Quote #199', 'Extra English Quote #200'];
-    const persianQuotes = ['خودت را باور داشته باش—تو توقف\u200cناپذیری.', 'جمله انگیزشی اضافه شماره 2', 'جمله انگیزشی اضافه شماره 3', 'جمله انگیزشی اضافه شماره 4', 'جمله انگیزشی اضافه شماره 5', 'جمله انگیزشی اضافه شماره 6', 'جمله انگیزشی اضافه شماره 7', 'جمله انگیزشی اضافه شماره 8', 'جمله انگیزشی اضافه شماره 9', 'جمله انگیزشی اضافه شماره 10', 'جمله انگیزشی اضافه شماره 11', 'جمله انگیزشی اضافه شماره 12', 'جمله انگیزشی اضافه شماره 13', 'جمله انگیزشی اضافه شماره 14', 'جمله انگیزشی اضافه شماره 15', 'جمله انگیزشی اضافه شماره 16', 'جمله انگیزشی اضافه شماره 17', 'جمله انگیزشی اضافه شماره 18', 'جمله انگیزشی اضافه شماره 19', 'جمله انگیزشی اضافه شماره 20', 'جمله انگیزشی اضافه شماره 21', 'جمله انگیزشی اضافه شماره 22', 'جمله انگیزشی اضافه شماره 23', 'جمله انگیزشی اضافه شماره 24', 'جمله انگیزشی اضافه شماره 25', 'جمله انگیزشی اضافه شماره 26', 'جمله انگیزشی اضافه شماره 27', 'جمله انگیزشی اضافه شماره 28', 'جمله انگیزشی اضافه شماره 29', 'جمله انگیزشی اضافه شماره 30', 'جمله انگیزشی اضافه شماره 31', 'جمله انگیزشی اضافه شماره 32', 'جمله انگیزشی اضافه شماره 33', 'جمله انگیزشی اضافه شماره 34', 'جمله انگیزشی اضافه شماره 35', 'جمله انگیزشی اضافه شماره 36', 'جمله انگیزشی اضافه شماره 37', 'جمله انگیزشی اضافه شماره 38', 'جمله انگیزشی اضافه شماره 39', 'جمله انگیزشی اضافه شماره 40', 'جمله انگیزشی اضافه شماره 41', 'جمله انگیزشی اضافه شماره 42', 'جمله انگیزشی اضافه شماره 43', 'جمله انگیزشی اضافه شماره 44', 'جمله انگیزشی اضافه شماره 45', 'جمله انگیزشی اضافه شماره 46', 'جمله انگیزشی اضافه شماره 47', 'جمله انگیزشی اضافه شماره 48', 'جمله انگیزشی اضافه شماره 49', 'جمله انگیزشی اضافه شماره 50', 'جمله انگیزشی اضافه شماره 51', 'جمله انگیزشی اضافه شماره 52', 'جمله انگیزشی اضافه شماره 53', 'جمله انگیزشی اضافه شماره 54', 'جمله انگیزشی اضافه شماره 55', 'جمله انگیزشی اضافه شماره 56', 'جمله انگیزشی اضافه شماره 57', 'جمله انگیزشی اضافه شماره 58', 'جمله انگیزشی اضافه شماره 59', 'جمله انگیزشی اضافه شماره 60', 'جمله انگیزشی اضافه شماره 61', 'جمله انگیزشی اضافه شماره 62', 'جمله انگیزشی اضافه شماره 63', 'جمله انگیزشی اضافه شماره 64', 'جمله انگیزشی اضافه شماره 65', 'جمله انگیزشی اضافه شماره 66', 'جمله انگیزشی اضافه شماره 67', 'جمله انگیزشی اضافه شماره 68', 'جمله انگیزشی اضافه شماره 69', 'جمله انگیزشی اضافه شماره 70', 'جمله انگیزشی اضافه شماره 71', 'جمله انگیزشی اضافه شماره 72', 'جمله انگیزشی اضافه شماره 73', 'جمله انگیزشی اضافه شماره 74', 'جمله انگیزشی اضافه شماره 75', 'جمله انگیزشی اضافه شماره 76', 'جمله انگیزشی اضافه شماره 77', 'جمله انگیزشی اضافه شماره 78', 'جمله انگیزشی اضافه شماره 79', 'جمله انگیزشی اضافه شماره 80', 'جمله انگیزشی اضافه شماره 81', 'جمله انگیزشی اضافه شماره 82', 'جمله انگیزشی اضافه شماره 83', 'جمله انگیزشی اضافه شماره 84', 'جمله انگیزشی اضافه شماره 85', 'جمله انگیزشی اضافه شماره 86', 'جمله انگیزشی اضافه شماره 87', 'جمله انگیزشی اضافه شماره 88', 'جمله انگیزشی اضافه شماره 89', 'جمله انگیزشی اضافه شماره 90', 'جمله انگیزشی اضافه شماره 91', 'جمله انگیزشی اضافه شماره 92', 'جمله انگیزشی اضافه شماره 93', 'جمله انگیزشی اضافه شماره 94', 'جمله انگیزشی اضافه شماره 95', 'جمله انگیزشی اضافه شماره 96', 'جمله انگیزشی اضافه شماره 97', 'جمله انگیزشی اضافه شماره 98', 'جمله انگیزشی اضافه شماره 99', 'جمله انگیزشی اضافه شماره 100', 'جمله انگیزشی اضافه شماره 101', 'جمله انگیزشی اضافه شماره 102', 'جمله انگیزشی اضافه شماره 103', 'جمله انگیزشی اضافه شماره 104', 'جمله انگیزشی اضافه شماره 105', 'جمله انگیزشی اضافه شماره 106', 'جمله انگیزشی اضافه شماره 107', 'جمله انگیزشی اضافه شماره 108', 'جمله انگیزشی اضافه شماره 109', 'جمله انگیزشی اضافه شماره 110', 'جمله انگیزشی اضافه شماره 111', 'جمله انگیزشی اضافه شماره 112', 'جمله انگیزشی اضافه شماره 113', 'جمله انگیزشی اضافه شماره 114', 'جمله انگیزشی اضافه شماره 115', 'جمله انگیزشی اضافه شماره 116', 'جمله انگیزشی اضافه شماره 117', 'جمله انگیزشی اضافه شماره 118', 'جمله انگیزشی اضافه شماره 119', 'جمله انگیزشی اضافه شماره 120', 'جمله انگیزشی اضافه شماره 121', 'جمله انگیزشی اضافه شماره 122', 'جمله انگیزشی اضافه شماره 123', 'جمله انگیزشی اضافه شماره 124', 'جمله انگیزشی اضافه شماره 125', 'جمله انگیزشی اضافه شماره 126', 'جمله انگیزشی اضافه شماره 127', 'جمله انگیزشی اضافه شماره 128', 'جمله انگیزشی اضافه شماره 129', 'جمله انگیزشی اضافه شماره 130', 'جمله انگیزشی اضافه شماره 131', 'جمله انگیزشی اضافه شماره 132', 'جمله انگیزشی اضافه شماره 133', 'جمله انگیزشی اضافه شماره 134', 'جمله انگیزشی اضافه شماره 135', 'جمله انگیزشی اضافه شماره 136', 'جمله انگیزشی اضافه شماره 137', 'جمله انگیزشی اضافه شماره 138', 'جمله انگیزشی اضافه شماره 139', 'جمله انگیزشی اضافه شماره 140', 'جمله انگیزشی اضافه شماره 141', 'جمله انگیزشی اضافه شماره 142', 'جمله انگیزشی اضافه شماره 143', 'جمله انگیزشی اضافه شماره 144', 'جمله انگیزشی اضافه شماره 145', 'جمله انگیزشی اضافه شماره 146', 'جمله انگیزشی اضافه شماره 147', 'جمله انگیزشی اضافه شماره 148', 'جمله انگیزشی اضافه شماره 149', 'جمله انگیزشی اضافه شماره 150', 'جمله انگیزشی اضافه شماره 151', 'جمله انگیزشی اضافه شماره 152', 'جمله انگیزشی اضافه شماره 153', 'جمله انگیزشی اضافه شماره 154', 'جمله انگیزشی اضافه شماره 155', 'جمله انگیزشی اضافه شماره 156', 'جمله انگیزشی اضافه شماره 157', 'جمله انگیزشی اضافه شماره 158', 'جمله انگیزشی اضافه شماره 159', 'جمله انگیزشی اضافه شماره 160', 'جمله انگیزشی اضافه شماره 161', 'جمله انگیزشی اضافه شماره 162', 'جمله انگیزشی اضافه شماره 163', 'جمله انگیزشی اضافه شماره 164', 'جمله انگیزشی اضافه شماره 165', 'جمله انگیزشی اضافه شماره 166', 'جمله انگیزشی اضافه شماره 167', 'جمله انگیزشی اضافه شماره 168', 'جمله انگیزشی اضافه شماره 169', 'جمله انگیزشی اضافه شماره 170', 'جمله انگیزشی اضافه شماره 171', 'جمله انگیزشی اضافه شماره 172', 'جمله انگیزشی اضافه شماره 173', 'جمله انگیزشی اضافه شماره 174', 'جمله انگیزشی اضافه شماره 175', 'جمله انگیزشی اضافه شماره 176', 'جمله انگیزشی اضافه شماره 177', 'جمله انگیزشی اضافه شماره 178', 'جمله انگیزشی اضافه شماره 179', 'جمله انگیزشی اضافه شماره 180', 'جمله انگیزشی اضافه شماره 181', 'جمله انگیزشی اضافه شماره 182', 'جمله انگیزشی اضافه شماره 183', 'جمله انگیزشی اضافه شماره 184', 'جمله انگیزشی اضافه شماره 185', 'جمله انگیزشی اضافه شماره 186', 'جمله انگیزشی اضافه شماره 187', 'جمله انگیزشی اضافه شماره 188', 'جمله انگیزشی اضافه شماره 189', 'جمله انگیزشی اضافه شماره 190', 'جمله انگیزشی اضافه شماره 191', 'جمله انگیزشی اضافه شماره 192', 'جمله انگیزشی اضافه شماره 193', 'جمله انگیزشی اضافه شماره 194', 'جمله انگیزشی اضافه شماره 195', 'جمله انگیزشی اضافه شماره 196', 'جمله انگیزشی اضافه شماره 197', 'جمله انگیزشی اضافه شماره 198', 'جمله انگیزشی اضافه شماره 199', 'جمله انگیزشی اضافه شماره 200'];
+    const englishQuotes = [
+      "Believe in yourself—you're unstoppable.",
+      "Dream big, start small, but act now!",
+      "Your only limit is your imagination.",
+      "Success begins with a single step.",
+      "The future belongs to those who work for it.",
+      "Every failure is a step toward success.",
+      "You are your greatest investment.",
+      "Be the reason someone smiles today.",
+      "Stay focused; stay determined.",
+      "Rise above your doubts and soar.",
+      "Great things take time—stay patient.",
+      "You’re braver than you think.",
+      "Turn obstacles into opportunities.",
+      "Believe in your purpose.",
+      "Each day is a new beginning.",
+      "Effort beats talent when talent doesn't work hard.",
+      "Celebrate your progress, however small.",
+      "Embrace challenges—they build strength.",
+      "Keep chasing your dreams.",
+      "Your mindset shapes your reality.",
+      "Small steps lead to big changes.",
+      "You are capable of greatness.",
+      "Persistence is key.",
+      "Learn from the past, live in the present.",
+      "Success starts with believing you can.",
+      "Failures are lessons in disguise.",
+      "Harness your inner power.",
+      "Commit to your goals every day.",
+      "Action conquers fear.",
+      "Discover your true potential.",
+      "Stay humble, stay hungry.",
+      "Dedication determines destiny.",
+      "You are stronger than you know.",
+      "Don't stop until you're proud.",
+      "Conquer your mind and you'll conquer the world.",
+      "Success is the result of hard work.",
+      "Stay inspired, stay unstoppable.",
+      "Face challenges head-on.",
+      "Pursue excellence, not perfection.",
+      "Your efforts will be rewarded.",
+      "The path to success is perseverance.",
+      "Believe in the beauty of your dreams.",
+      "Hard work beats excuses.",
+      "You’re destined for greatness.",
+      "Dream, believe, achieve.",
+      "Life is 10% what happens and 90% how you respond.",
+      "Push boundaries, embrace growth.",
+      "Every day is a chance to improve.",
+      "Fuel your mind with positivity.",
+      "Strength grows in moments of challenge.",
+      "Commit to the climb, the view is worth it.",
+      "Find joy in the journey.",
+      "Be relentless in your pursuit.",
+      "You are what you repeatedly do.",
+      "Focus on progress, not perfection.",
+      "Your potential is limitless.",
+      "Face your fears; they’ll empower you.",
+      "The world needs your unique gift.",
+      "Determination beats hesitation.",
+      "Rise by lifting others.",
+      "Inspiration is everywhere—find it.",
+      "Fail forward, keep moving.",
+      "Don't wait for opportunity; create it.",
+      "Your perseverance will pay off.",
+      "Stay strong, stay resilient.",
+      "You have the power to change your story.",
+      "Take the first step and don't look back.",
+      "Unleash your inner warrior.",
+      "Start small but dream big.",
+      "Keep climbing; the summit awaits.",
+      "You have greatness within you.",
+      "Let your dreams guide you.",
+      "Consistency is the secret to success.",
+      "Dare to be different.",
+      "You are the architect of your future.",
+      "Strength comes from struggle.",
+      "Your effort matters more than the outcome.",
+      "Be the hardest worker in the room.",
+      "Find strength in your passions.",
+      "Success is a journey, not a destination.",
+      "Don't let fear hold you back.",
+      "Keep fighting for what you want.",
+      "Your growth inspires others.",
+      "Take pride in your progress.",
+      "Stay curious, keep learning.",
+      "Stay positive; possibilities are endless.",
+      "In every difficulty lies opportunity.",
+      "Harness the power of optimism.",
+      "Be confident in your abilities.",
+      "Visualize success and work for it.",
+      "Transform setbacks into comebacks.",
+      "Your journey is your story.",
+      "Leave no dream unfulfilled.",
+      "Your energy creates your reality.",
+      "Build momentum every day.",
+      "Be bold and embrace change.",
+      "Success starts with self-discipline.",
+      "Stay committed to your goals.",
+      "Radiate courage, embrace challenges.",
+      "Believe, hustle, succeed."
+    ];
+
+    const persianQuotes = [
+      "خودت را باور داشته باش—تو توقف‌ناپذیری.",
+      "بزرگ فکر کن، کوچک شروع کن اما همین حالا اقدام کن!",
+      "تنها حد تو تخیلات توست.",
+      "موفقیت با یک قدم ساده شروع می‌شود.",
+      "آینده متعلق به کسانی است که برای آن تلاش می‌کنند.",
+      "هر شکست یک قدم به سوی موفقیت است.",
+      "خودت بزرگ‌ترین سرمایه‌گذاری‌ات هستی.",
+      "دلیل شادی کسی باش.",
+      "متمرکز بمان؛ مصمم بمان.",
+      "شک و تردیدهای خود را پشت سر بگذار و اوج بگیر.",
+      "موفقیت زمان می‌برد—صبور بمان.",
+      "از شکست نترس؛ آنها پله‌های پیشرفت هستند.",
+      "هر روز یک شروع تازه است.",
+      "تلاش، استعداد را شکست می‌دهد وقتی که استعداد تلاش نمی‌کند.",
+      "پیشرفت کوچک را جشن بگیر.",
+      "چالش‌ها تو را قوی‌تر می‌سازند.",
+      "به دنبال رویاهایت برو.",
+      "ذهنیت تو واقعیتت را می‌سازد.",
+      "گام‌های کوچک منجر به تغییرات بزرگ می‌شوند.",
+      "تو توانایی دستیابی به بزرگی را داری.",
+      "پایداری کلید موفقیت است.",
+      "از گذشته یاد بگیر؛ در حال زندگی کن.",
+      "موفقیت از باور به خود آغاز می‌شود.",
+      "شکست‌ها در واقع دروس پنهان هستند.",
+      "قدرت درونی خود را مهار کن.",
+      "به اهداف خود پایبند باش.",
+      "عمل کردن بر ترس غالب می‌شود.",
+      "پتانسیل واقعی خود را کشف کن.",
+      "متواضع بمان؛ تشنه بمان.",
+      "تعهد، تقدیر را رقم می‌زند.",
+      "قوی‌تر از آن هستی که می‌دانی.",
+      "تا وقتی که به خودت افتخار نکنی، دست نکش.",
+      "ذهن خود را تسخیر کن تا جهان را تسخیر کنی.",
+      "موفقیت نتیجه سخت‌کوشی است.",
+      "الهام‌بخش باش؛ توقف‌ناپذیر باش.",
+      "با چالش‌ها رو به رو شو.",
+      "عالی بودن را دنبال کن، نه کامل بودن را.",
+      "تلاش‌هایت پاداش خواهند داشت.",
+      "مسیر موفقیت، استقامت است.",
+      "به زیبایی رویاهایت ایمان داشته باش.",
+      "کار سخت بهانه‌ها را شکست می‌دهد.",
+      "برای بزرگی ساخته شده‌ای.",
+      "رویاپردازی کن، باور کن، دست یاب.",
+      "زندگی ۱۰٪ اتفاقات است و ۹۰٪ واکنش تو.",
+      "مرزها را پشت سر بگذار؛ رشد را در آغوش بگیر.",
+      "هر روز فرصتی برای بهبود است.",
+      "ذهن خود را با مثبت‌گرایی پر کن.",
+      "قدرت در لحظات چالش رشد می‌کند.",
+      "صعود را بپذیر؛ منظره ارزشش را دارد.",
+      "در مسیر شادی پیدا کن.",
+      "در تلاش خود بی‌امان باش.",
+      "عادت‌هایت تو را تعریف می‌کنند.",
+      "روی پیشرفت تمرکز کن، نه بر کمال.",
+      "پتانسیل تو بی‌نهایت است.",
+      "با ترس‌هایت روبه‌رو شو؛ آنها تو را قوی‌تر می‌کنند.",
+      "دنیا به استعداد منحصر به فرد تو نیاز دارد.",
+      "تصمیم‌گیری مهم‌تر از تردید است.",
+      "از شکست به عنوان فرصتی برای بازگشت استفاده کن.",
+      "باور داشته باش که می‌توانی؛ ناتوانی یعنی باور نداشتن.",
+      "انرژی خود را بر روی عمل متمرکز کن.",
+      "موفقیت یک انتخاب است.",
+      "دست از تلاش برندار؛ ارزشش را دارد.",
+      "در درون خود اعتماد به نفس بساز.",
+      "هر مانع، فرصتی برای رشد است.",
+      "امروز روز شروع تازه‌ای است.",
+      "موفقیت از دل سختی‌ها زاده می‌شود.",
+      "تلاش‌هایت آینده‌ات را می‌سازند.",
+      "تسلیم نشو؛ مسیر طولانی ولی شیرین است.",
+      "در مسیر عشق و اشتیاق قدم بردار.",
+      "هدف، راهنما و تلاش، کلید است.",
+      "موفقیت در سایه تعهد می‌آید.",
+      "به خودت قول بده که هرگز دست نکشی.",
+      "افق‌های جدید در انتظار کشف هستند.",
+      "هر تلاش کوچک، راهی به سوی هدف است.",
+      "رویای زندگی به واقعیت تبدیل می‌شود."
+    ];
 
     function getRandomQuote(quotes) {
       return quotes[Math.floor(Math.random() * quotes.length)];
     }
 
+    function stripCode(text) {
+      // Remove trailing "#number" for English or "شماره number" for Persian
+      return text.replace(/(?:#\d+$|شماره\s*\d+$)/, '').trim();
+    }
+
     function changeQuotes() {
-      document.getElementById("english").innerText = getRandomQuote(englishQuotes);
-      document.getElementById("persian").innerText = getRandomQuote(persianQuotes);
+      const en = stripCode(getRandomQuote(englishQuotes));
+      const fa = stripCode(getRandomQuote(persianQuotes));
+      document.getElementById("english").innerText = en;
+      document.getElementById("persian").innerText = fa;
     }
 
     function toggleTheme() {
       document.body.classList.toggle("dark-mode");
     }
 
+    // Initialize with a random quote when the page loads
     changeQuotes();
   </script>
 </body>
