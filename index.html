@@ -1,66 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trying to motivate you</title>
+  
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Google Fonts: Inter (English) & Vazirmatn (Persian) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+
   <style>
+    /* Variables for smooth theme transition */
+    :root {
+      --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+      --card-border: 1px solid rgba(255, 255, 255, 0.4);
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --btn-bg: #0f172a;
+      --btn-text: #ffffff;
+      --btn-hover: #1e293b;
+    }
+
+    .dark-mode {
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      --card-border: 1px solid rgba(255, 255, 255, 0.08);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --btn-bg: #f8fafc;
+      --btn-text: #0f172a;
+      --btn-hover: #e2e8f0;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f4f8;
-      color: #333;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
       margin: 0;
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: background 0.3s, color 0.3s;
+      transition: background 0.5s ease, color 0.5s ease;
+      overflow: hidden;
     }
-    .quote {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 10px 0;
+
+    /* Elegant Card Container */
+    .quote-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: var(--card-border);
+      box-shadow: var(--card-shadow);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 600px;
+      width: 85%;
       text-align: center;
-      max-width: 80%;
+      transition: transform 0.3s ease, background 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
     }
-    .persian {
+
+    .quote-card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* English Quote Styling */
+    #english {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.4;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+    }
+
+    /* Persian Quote Styling */
+    #persian {
+      font-family: 'Vazirmatn', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.6;
+      color: var(--text-main);
       direction: rtl;
     }
+
+    /* Text Fade-In Animation */
+    .quote {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .quote.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--text-muted);
+      opacity: 0.15;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    /* Top Utility Bar (Theme Toggle) */
     .theme-toggle {
       position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: none;
+      top: 24px;
+      right: 24px;
+      background: var(--card-bg);
+      border: var(--card-border);
+      box-shadow: var(--card-shadow);
       cursor: pointer;
-      font-size: 20px;
+      font-size: 18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    .theme-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    /* Primary Action Button */
     .change-button {
       margin-top: 30px;
-      padding: 10px 20px;
-      background: #000;
-      color: #fff;
+      padding: 14px 28px;
+      background: var(--btn-bg);
+      color: var(--btn-text);
       border: none;
       cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
     }
-    .dark-mode {
-      background: #1e1e1e;
-      color: #f0f0f0;
+
+    .change-button:hover {
+      background: var(--btn-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .change-button:active {
+      transform: translateY(1px);
     }
   </style>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-  <div id="english" class="quote"></div>
-  <div id="persian" class="quote persian"></div>
+
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">🌓</button>
+
+  <div class="quote-card">
+    <div id="english" class="quote"></div>
+    <div class="divider"></div>
+    <div id="persian" class="quote"></div>
+  </div>
+
   <button class="change-button" onclick="changeQuotes()">Change the Text</button>
+
   <script>
     const englishQuotes = [
       "Believe in yourself—you're unstoppable.",
@@ -248,22 +368,35 @@
     }
 
     function stripCode(text) {
-      // Remove trailing "#number" for English or "شماره number" for Persian
       return text.replace(/(?:#\d+$|شماره\s*\d+$)/, '').trim();
     }
 
     function changeQuotes() {
-      const en = stripCode(getRandomQuote(englishQuotes));
-      const fa = stripCode(getRandomQuote(persianQuotes));
-      document.getElementById("english").innerText = en;
-      document.getElementById("persian").innerText = fa;
+      const enEl = document.getElementById("english");
+      const faEl = document.getElementById("persian");
+
+      // Temporarily remove show class to trigger soft fade transition
+      enEl.classList.remove("show");
+      faEl.classList.remove("show");
+
+      setTimeout(() => {
+        const en = stripCode(getRandomQuote(englishQuotes));
+        const fa = stripCode(getRandomQuote(persianQuotes));
+        
+        enEl.innerText = en;
+        faEl.innerText = fa;
+
+        // Apply show class back to trigger transitions
+        enEl.classList.add("show");
+        faEl.classList.add("show");
+      }, 200);
     }
 
     function toggleTheme() {
       document.body.classList.toggle("dark-mode");
     }
 
-    // Initialize with a random quote when the page loads
+    // Initialize layout load
     changeQuotes();
   </script>
 </body>
